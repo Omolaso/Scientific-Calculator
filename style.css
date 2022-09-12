@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.buttons div{
+    border: 1px solid #f4f4f4;
+    cursor: pointer;
+    height: 60px;
+    line-height: 50px;
+    text-align: center;
+}
