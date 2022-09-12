@@ -575,6 +575,10 @@ video {
   width: 100%;
 }
 
+.w-1\/2 {
+  width: 50%;
+}
+
 .max-w-3xl {
   max-width: 48rem;
 }
@@ -585,6 +589,10 @@ video {
 
 .gap-y-2 {
   row-gap: 0.5rem;
+}
+
+.border {
+  border-width: 1px;
 }
 
 .text-center {
@@ -602,7 +610,9 @@ video {
 .buttons div{
   border: 1px solid #f4f4f4;
   cursor: pointer;
-  height: 60px;
+  height: 50px;
   line-height: 50px;
   text-align: center;
+  width: 50px;
+  border-radius: 50%;
 }

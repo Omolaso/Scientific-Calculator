@@ -14,11 +14,14 @@ buttons.map((button) => {
             case '√':
                 display.innerText = Math.sqrt(display.innerText);
                 break;
+            case 'log':
+                display.innerText = Math.sqrt(display.innerText);
+                break;
             case '=':
                 try {
                     display.innerText = eval(display.innerText)
                 } catch (error) {
-                    display.innerText = 'error'
+                    display.innerText = 'SYNTAX ERROR'
                 }
                 break;
             default: 
