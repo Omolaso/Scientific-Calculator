@@ -10,26 +10,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="wrapper" class="w-full max-w-3xl mx-auto">
+    <div id="wrapper" class="w-full min-h-screen max-w-3xl mx-auto">
         <header class="text-center">
             <h1>Scientific Calculator</h1>
         </header>
-        <div id="calculator-container" class="text-center border w-1/2">
-            <div id="display" class="text-right h-10 leading-10 "></div>
-            <div class="buttons mx-auto grid grid-cols-3 gap-y-2">
+        <div id="calculator-container" class="border-maroon max-w-md border w-full mx-auto">
+            <div class="border border-maroon px-4">
+                <div id="input-display" class="text-right h-10 leading-10"></div>
+                <div id="answer-display" class="text-right h-10 leading-10"></div>
+            </div>
+            <div class="buttons p-4 justify-items-center grid grid-cols-4 gap-y-4">
                 <div class="button"> C </div>
                 <div class="button"> * </div>
                 <div class="button"> ← </div>
                 <div class="button"> √ </div>
+                <div class="button"> % </div>
                 <div class="button"> + </div>
                 <div class="button"> - </div>
-                <div class="button"> / </div>
+                <div class="button"> ÷ </div>
                 <div class="button"> 3√ </div>
                 <div class="button"> log </div>
-                <div class="button"> cosθ </div>
-                <div class="button"> sinθ </div>
-                <div class="button"> tanθ </div>
+                <div class="button"> cos </div>
+                <div class="button"> sin </div>
+                <div class="button"> tan </div>
                 <div class="button"> log </div>
+                <div class="button"> π </div>
                 <div class="button"> 7 </div>
                 <div class="button"> 8 </div>
                 <div class="button"> 9 </div>
