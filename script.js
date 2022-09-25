@@ -45,7 +45,7 @@ buttons.map((button) => {
                 break;
 
             case '=':
-                // inputDisplayOnce()
+                
                 if(display.innerText === ''){
                     return
                 }else if(display.innerText === 'SYNTAX ERROR' || display.innerText === 'NaN'){
@@ -61,7 +61,13 @@ buttons.map((button) => {
                 } catch (error) {
                     display.innerText = 'SYNTAX ERROR'
                 }
+
+                // if(inputDisplay.innerText !== ''){
+                //     inputDisplay.innerText += e.target.innerText;
+                //     inputDisplay.innerText += display.innerText;
+                // }
                 break;
+
             default: 
                 display.innerText += e.target.innerText;
                 // inputDisplay.innerText === display.value
@@ -71,6 +77,6 @@ buttons.map((button) => {
     });
 });
 
-function inputDisplayOnce(){
-    onclick(console.log('hi'))
-}
+// function inputDisplayOnce(){
+//     onclick(console.log('hi'))
+// }
