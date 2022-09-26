@@ -37,21 +37,33 @@ buttons.map((button) => {
                 break;
 
             case 'π':
-                inputDisplay.innerText = `π ${display.innerText}`
+                inputDisplay.innerText = `${display.innerText}(22/7)` ;
+                display.innerText = 22/7 * `${display.innerText}`;
                 break;
+
+            // case 'log':
+            //     inputDisplay.innerText = `${}` ;
+            //     display.innerText = Math.LN10;
+            //     break;
 
             case 'log':
-                // display.innerText = Math.sqrt(display.innerText);
+                inputDisplay.innerText = `log10` ;
+                // display.innerText = Math.LN10;
+                display.innerText = Math.log10();
                 break;
 
+
+                // log<sub>10</sub>
+
             case '=':
-                
+
+                // prevents 'undefined'
                 if(display.innerText === ''){
                     return
                 }else if(display.innerText === 'SYNTAX ERROR' || display.innerText === 'NaN'){
                     inputDisplay.innerText = '';
-    
                 }
+                // prevents 'undefined'
 
                 inputDisplay.innerText += display.innerText;
                 inputDisplay.style.fontSize = '15px';
