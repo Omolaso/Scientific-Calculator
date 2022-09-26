@@ -17,8 +17,11 @@ buttons.map((button) => {
                 break;
 
             case '÷':
-                // inputDisplay.innerText = '';
                 display.innerText = `${display.innerText}/ `
+                break;
+
+            case 'X':
+                display.innerText = `${display.innerText} * `
                 break;
 
             case '←':
@@ -36,24 +39,35 @@ buttons.map((button) => {
                 display.innerText = Math.cbrt(display.innerText);
                 break;
 
+            case '':
+                inputDisplay.innerText = `${display.innerText}2` ;
+                display.innerText = Math.pow(`${display.innerText}`, 2);
+                break;
+
             case 'π':
                 inputDisplay.innerText = `${display.innerText}(22/7)` ;
                 display.innerText = 22/7 * `${display.innerText}`;
                 break;
 
-            // case 'log':
-            //     inputDisplay.innerText = `${}` ;
-            //     display.innerText = Math.LN10;
-            //     break;
-
             case 'log':
-                inputDisplay.innerText = `log10` ;
-                // display.innerText = Math.LN10;
-                display.innerText = Math.log10();
+                inputDisplay.innerText = `Log(${display.innerText})` ;
+                display.innerText = Math.log10(`${display.innerText}`);
                 break;
 
+            case 'sin':
+                inputDisplay.innerText = `sin(${display.innerText}) rad` ;
+                display.innerText = Math.sin(`${display.innerText}`);
+                break;
 
-                // log<sub>10</sub>
+            case 'cos':
+                inputDisplay.innerText = `cos(${display.innerText}) rad` ;
+                display.innerText = Math.cos(`${display.innerText}`);
+                break;
+
+            case 'tan':
+                inputDisplay.innerText = `tan(${display.innerText}) rad` ;
+                display.innerText = Math.tan(`${display.innerText}`);
+                break;
 
             case '=':
 
@@ -89,6 +103,10 @@ buttons.map((button) => {
     });
 });
 
-// function inputDisplayOnce(){
-//     onclick(console.log('hi'))
-// }
+
+
+// function toDegrees(angle){
+//     return angle * (180 / Math.PI);
+//   }
+
+//   console.log(toDegrees(0.146));
