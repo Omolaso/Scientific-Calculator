@@ -9,48 +9,49 @@
     <link href="./dist/output.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="flex">
-    <div id="wrapper" class="w-full min-h-screen max-w-3xl mx-auto">
-        <header class="text-center">
-            <h1>Scientific Calculator</h1>
-        </header>
-        <div id="calculator-container" class="border-maroon max-w-md border w-full mx-auto">
-            <div class="border border-maroon px-4">
-                <div id="input-display" class="text-right h-10 leading-10"></div>
-                <div id="answer-display" class="text-right h-10 leading-10"></div>
-            </div>
-            <div class="buttons p-4 justify-items-center grid grid-cols-4 gap-y-4">
-                <div class="button"> C </div>
-                <div class="button"> X </div>
-                <div class="button"> ← </div>
-                <div class="button"> √ </div>
-                <div class="button"> % </div>
-                <div class="button"> + </div>
-                <div class="button"> - </div>
-                <div class="button"> ÷ </div>
-                <div class="button"> 3√ </div>
-                <div class="button"> tan </div>
-                <div class="button"> cos </div>
-                <div class="button"> sin </div>
-                <div class="button"> log </div>
-                <div class="button"> x<sup>2</sup> </div>
-                <div class="button"> log</div>
-                <div class="button"> π </div>
-                <div class="button"> 7 </div>
-                <div class="button"> 8 </div>
-                <div class="button"> 9 </div>
-                <div class="button"> 4 </div>
-                <div class="button"> 5 </div>
-                <div class="button"> 6 </div>
-                <div class="button"> 1 </div>
-                <div class="button"> 2 </div>
-                <div class="button"> 3 </div>
-                <div class="button"> . </div>
-                <div class="button"> 0 </div>
-                <div id="equal" class="button"> = </div>
+<body>
+    <main class="flex items-center justify-center">
+        <div id="wrapper" class="w-full min-h-screen max-w-xl mx-auto ">
+            <header class="text-center">
+                <h1>Scientific Calculator</h1>
+            </header>
+            <div id="calculator-container" class="border-grey max-w-md border bg-grey w-full mx-auto">
+                <div class="border border-grey rounded-md px-4 bg-white">
+                    <div id="input-display" class="text-right h-10 leading-10"></div>
+                    <div id="answer-display" class="text-right h-10 leading-10"></div>
+                </div>
+                <div class="buttons p-4 justify-items-center grid grid-cols-7 gap-4">
+                    <div class="button"> C </div>
+                    <div class="button"> % </div>
+                    <div class="button"> ← </div>
+                    <div class="button"> + </div>
+                    <div class="button"> 1 </div>
+                    <div class="button"> 2 </div>
+                    <div class="button"> 3 </div>
+                    <div class="button"> x<sup style="font-size: 8px ;">2</sup></div>
+                    <div class="button"> sin </div>
+                    <div class="button"> log </div>
+                    <div class="button"> - </div>
+                    <div class="button"> 4 </div>
+                    <div class="button"> 5 </div>
+                    <div class="button"> 6 </div>
+                    <div class="button"> √ </div>
+                    <div class="button"> cos </div>
+                    <div class="button"> π </div>
+                    <div class="button"> X </div>
+                    <div class="button"> 7 </div>
+                    <div class="button"> 8 </div>
+                    <div class="button"> 9 </div>
+                    <div class="button"> 3√ </div>
+                    <div class="button"> tan </div>
+                    <div class="button"> . </div>
+                    <div class="button"> ÷ </div>
+                    <div class="button"> 0 </div>
+                    <div id="equal" class="button bg"> = </div>
+                </div>
             </div>
         </div>
-    </div>
+    </main>
 
 
     <script src="script.js"></script>

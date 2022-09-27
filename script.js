@@ -12,16 +12,20 @@ buttons.map((button) => {
                 break;
 
             case '%':
-                inputDisplay.innerText = `${display.innerText} * 100`;
-                display.innerText = `${display.innerText}` * 100
+                if(display.innerText === ''){
+                    return
+                }else{
+                    inputDisplay.innerText = `${display.innerText} * 100`;
+                    display.innerText = `${display.innerText}` * 100
+                }
                 break;
 
             case '÷':
-                display.innerText = `${display.innerText}/ `
+                display.innerText = `${display.innerText}/`
                 break;
 
             case 'X':
-                display.innerText = `${display.innerText} * `
+                display.innerText = `${display.innerText}* `
                 break;
 
             case '←':
@@ -30,43 +34,75 @@ buttons.map((button) => {
                 break;
 
             case '√':
-                inputDisplay.innerText = `√(${display.innerText})`;
-                display.innerText = Math.sqrt(display.innerText);
+                if(display.innerText === ''){
+                    return
+                }else{
+                    inputDisplay.innerText = `√(${display.innerText})`;
+                    display.innerText = Math.sqrt(display.innerText);
+                }
                 break;
 
             case '3√':
-                inputDisplay.innerText = `3√(${display.innerText})`;
-                display.innerText = Math.cbrt(display.innerText);
+                if(display.innerText === ''){
+                    return
+                }else{
+                    inputDisplay.innerText = `3√(${display.innerText})`;
+                    display.innerText = Math.cbrt(display.innerText);
+                }
                 break;
 
-            case '':
-                inputDisplay.innerText = `${display.innerText}2` ;
-                display.innerText = Math.pow(`${display.innerText}`, 2);
+            case 'x2':
+                if(display.innerText === ''){
+                    return
+                }else{
+                    inputDisplay.innerText = `${display.innerText} * ${display.innerText}` ;
+                    display.innerText = Math.pow(`${display.innerText}`, 2);
+                }
                 break;
 
             case 'π':
-                inputDisplay.innerText = `${display.innerText}(22/7)` ;
-                display.innerText = 22/7 * `${display.innerText}`;
+                if(display.innerText === ''){
+                    return inputDisplay.innerText = 3.14159265359
+                }else{
+                    inputDisplay.innerText = `${display.innerText}(22/7)` ;
+                    display.innerText = 22/7 * `${display.innerText}`;
+                }
                 break;
 
             case 'log':
-                inputDisplay.innerText = `Log(${display.innerText})` ;
-                display.innerText = Math.log10(`${display.innerText}`);
+                if(display.innerText === ''){
+                    return
+                }else{
+                    inputDisplay.innerText = `Log(${display.innerText})` ;
+                    display.innerText = Math.log10(`${display.innerText}`);
+                }
                 break;
 
             case 'sin':
-                inputDisplay.innerText = `sin(${display.innerText}) rad` ;
-                display.innerText = Math.sin(`${display.innerText}`);
+                if(display.innerText === ''){
+                    return
+                }else{
+                    inputDisplay.innerText = `sin(${display.innerText}) rad` ;
+                    display.innerText = Math.sin(`${display.innerText}`);
+                }
                 break;
 
             case 'cos':
-                inputDisplay.innerText = `cos(${display.innerText}) rad` ;
-                display.innerText = Math.cos(`${display.innerText}`);
+                if(display.innerText === ''){
+                    return
+                }else{
+                    inputDisplay.innerText = `cos(${display.innerText}) rad` ;
+                    display.innerText = Math.cos(`${display.innerText}`);
+                }
                 break;
 
             case 'tan':
-                inputDisplay.innerText = `tan(${display.innerText}) rad` ;
-                display.innerText = Math.tan(`${display.innerText}`);
+                if(display.innerText === ''){
+                    return
+                }else{
+                    inputDisplay.innerText = `tan(${display.innerText}) rad` ;
+                    display.innerText = Math.tan(`${display.innerText}`);
+                }
                 break;
 
             case '=':
@@ -88,16 +124,17 @@ buttons.map((button) => {
                     display.innerText = 'SYNTAX ERROR'
                 }
 
-                // if(inputDisplay.innerText !== ''){
-                //     inputDisplay.innerText += e.target.innerText;
-                //     inputDisplay.innerText += display.innerText;
+                // if(inputDisplay !== ''){
+                //     inputDisplay.innerText = '';
+                //     inputDisplay.innerText += display.innerText
+                //     display.innerText = '';
                 // }
                 break;
 
             default: 
                 display.innerText += e.target.innerText;
-                // inputDisplay.innerText === display.value
-        }
+                inputDisplay.innerText = ''              
+            }
         
         
     });

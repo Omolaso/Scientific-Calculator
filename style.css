@@ -3,15 +3,20 @@
 @tailwind utilities;
 
 .buttons div{
-    border: 1px solid red;
+    border: 1px solid black;
     cursor: pointer;
     height: 50px;
     line-height: 50px;
     text-align: center;
     width: 50px;
-    border-radius: 50%;
+    border-radius: 10px;
+    background: white;
 }
 
-sub{
-    font-size: 7px;
+.buttons div:hover{
+    opacity: .8;
+}
+
+#equal{
+    grid-area: auto;
 }
