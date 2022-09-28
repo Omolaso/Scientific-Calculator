@@ -18,5 +18,8 @@
 }
 
 #equal{
-    grid-area: auto;
+    grid-area: auto auto;
+    background: #454545;
+    color: white;
+    width: 110px;
 }

@@ -106,7 +106,7 @@ buttons.map((button) => {
                 break;
 
             case '=':
-
+                clearUI();
                 // prevents 'undefined'
                 if(display.innerText === ''){
                     return
@@ -120,15 +120,11 @@ buttons.map((button) => {
                 display.style.fontSize = '30px';
                 try {
                     display.innerText = eval(display.innerText)
+                   
                 } catch (error) {
                     display.innerText = 'SYNTAX ERROR'
                 }
 
-                // if(inputDisplay !== ''){
-                //     inputDisplay.innerText = '';
-                //     inputDisplay.innerText += display.innerText
-                //     display.innerText = '';
-                // }
                 break;
 
             default: 
@@ -140,10 +136,8 @@ buttons.map((button) => {
     });
 });
 
-
-
-// function toDegrees(angle){
-//     return angle * (180 / Math.PI);
-//   }
-
-//   console.log(toDegrees(0.146));
+function clearUI(){
+   if(inputDisplay.innerText !== '' ){
+    inputDisplay.innerText = '';
+   }
+}
