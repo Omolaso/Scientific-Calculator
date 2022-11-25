@@ -11,15 +11,23 @@
     width: 50px;
     border-radius: 10px;
     background: white;
+    transition: 0.5s
 }
 
 .buttons div:hover{
-    opacity: .8;
+    background: black;
+    color: white;
 }
 
 #equal{
     grid-area: auto auto;
     background: #454545;
     color: white;
-    width: 110px;
+    width: 150px;
+}
+
+@media screen and (max-width: 768px) {
+    #equal{
+        width: 140px;
+    }    
 }

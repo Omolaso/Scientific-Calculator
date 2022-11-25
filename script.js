@@ -1,7 +1,7 @@
 const display = document.getElementById('answer-display');
 const inputDisplay = document.getElementById('input-display');
 const buttons = Array.from(document.getElementsByClassName('button'));
-// console.log(button);
+// console.log(buttons);
 
 buttons.map((button) => {
     button.addEventListener('click', (e) => {
@@ -12,7 +12,7 @@ buttons.map((button) => {
                 break;
 
             case '%':
-                if(display.innerText === ''){
+                if(!display.innerText){
                     return
                 }else{
                     inputDisplay.innerText = `${display.innerText} * 100`;
@@ -24,7 +24,7 @@ buttons.map((button) => {
                 display.innerText = `${display.innerText}/`
                 break;
 
-            case 'X':
+            case 'x':
                 display.innerText = `${display.innerText}* `
                 break;
 
@@ -34,7 +34,7 @@ buttons.map((button) => {
                 break;
 
             case '√':
-                if(display.innerText === ''){
+                if(!display.innerText){
                     return
                 }else{
                     inputDisplay.innerText = `√(${display.innerText})`;
@@ -43,7 +43,7 @@ buttons.map((button) => {
                 break;
 
             case '3√':
-                if(display.innerText === ''){
+                if(!display.innerText){
                     return
                 }else{
                     inputDisplay.innerText = `3√(${display.innerText})`;
@@ -52,7 +52,7 @@ buttons.map((button) => {
                 break;
 
             case 'x2':
-                if(display.innerText === ''){
+                if(!display.innerText){
                     return
                 }else{
                     inputDisplay.innerText = `${display.innerText} * ${display.innerText}` ;
@@ -61,7 +61,7 @@ buttons.map((button) => {
                 break;
 
             case 'π':
-                if(display.innerText === ''){
+                if(!display.innerText){
                     return inputDisplay.innerText = 3.14159265359
                 }else{
                     inputDisplay.innerText = `${display.innerText}(22/7)` ;
@@ -79,7 +79,7 @@ buttons.map((button) => {
                 break;
 
             case 'sin':
-                if(display.innerText === ''){
+                if(!display.innerText){
                     return
                 }else{
                     inputDisplay.innerText = `sin(${display.innerText}) rad` ;
@@ -88,7 +88,7 @@ buttons.map((button) => {
                 break;
 
             case 'cos':
-                if(display.innerText === ''){
+                if(!display.innerText){
                     return
                 }else{
                     inputDisplay.innerText = `cos(${display.innerText}) rad` ;
@@ -97,7 +97,7 @@ buttons.map((button) => {
                 break;
 
             case 'tan':
-                if(display.innerText === ''){
+                if(!display.innerText){
                     return
                 }else{
                     inputDisplay.innerText = `tan(${display.innerText}) rad` ;
@@ -106,9 +106,10 @@ buttons.map((button) => {
                 break;
 
             case '=':
-                clearUI();
+                clearUI(); //prevents multiple display values into inputDisplay
+
                 // prevents 'undefined'
-                if(display.innerText === ''){
+                if(!display.innerText){
                     return
                 }else if(display.innerText === 'SYNTAX ERROR' || display.innerText === 'NaN'){
                     inputDisplay.innerText = '';
@@ -129,15 +130,13 @@ buttons.map((button) => {
 
             default: 
                 display.innerText += e.target.innerText;
-                inputDisplay.innerText = ''              
+                inputDisplay.innerText = '';         
             }
-        
-        
     });
 });
 
 function clearUI(){
    if(inputDisplay.innerText !== '' ){
     inputDisplay.innerText = '';
-   }
-}
+   };
+};
